@@ -338,10 +338,10 @@
 <section id="top_sect" class="second">
     <h1 style="color: mediumpurple">My Dream Team - APD</h1>
     <img src="img/img.png" alt="logo">
+    <button onclick="DemoApp.expand();">Развернуть Webview</button>
     <button id="main_btn" onclick="DemoApp.sendMessage('Привет APD!');">Нажми меня, поздороваемся</button>
     <button id="with_webview_btn" onclick="DemoApp.sendMessage('Привет мир!', true);">Send «Hello, World!» with inline webview button</button>
     <button id="data_btn" onclick="DemoApp.sendTime(true);">Отправь время в бота (x10 раз)</button>
-    <button onclick="DemoApp.expand();">Развернуть Webview</button>
     <button onclick="DemoApp.toggleMainButton(this);">Скрыть главную кнопку</button>
     <input type="text" placeholder="Input text in regular input..." id="regular_field"/>
     <div
@@ -443,7 +443,7 @@
             document.body.style.visibility = '';
             Telegram.WebApp.ready();
             Telegram.WebApp.MainButton.setParams({
-                text      : 'CLOSE WEBVIEW',
+                text      : 'Закрыть WEBVIEW',
                 is_visible: true
             }).onClick(DemoApp.close);
         },
@@ -715,7 +715,7 @@
             // DISABLE BACKEND FOR FRONTEND DEMO
             // YOU CAN USE YOUR OWN REQUESTS TO YOUR OWN BACKEND
             // CHANGE THIS CODE TO YOUR OWN
-            return onCallback && onCallback({error: 'Ну привет! Потом доделаю эту функцию... она должна слать запросы на наш бэкенд'});
+            return onCallback && onCallback({error: 'Привет О_О'});
             // return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
 
             const authData = DemoApp.initData || '';
